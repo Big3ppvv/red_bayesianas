@@ -50,7 +50,7 @@ reunion_cpd=TabularCPD(variable='Reunion',
 
 red_bayes.add_cpds(lluvia_cpd,mantenimiento_cpd,tren_cpd,reunion_cpd)
 inferencia = VariableElimination(red_bayes)
-consulta_1= inferencia.query(variables=['Mantenimiento'],
-                            evidence={'Reunion':'no asistir'})
+consulta_1= inferencia.query(variables=['Lluvia'],
+                            evidence={'Reunion':'asistir'})
 
 print(consulta_1)
